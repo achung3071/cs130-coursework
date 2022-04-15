@@ -3,9 +3,19 @@
     box-sizing: border-box;
 }
 
+@media only screen and (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+}
+
 body {
     margin: 0px;
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto Mono', monospace;
+    background-image: url("https://images.unsplash.com/photo-1492305175278-3b3afaa2f31f");
+    background-repeat: no-repeat;
+    background-size: 100%;
+
 }
 
 header,
@@ -18,8 +28,22 @@ li {
     line-height: 1.5em;
 }
 
+main {
+    display: flex;
+}
+
+section {
+    flex: 1;
+}
+
+#tutorials {
+    background-color: aliceblue;
+}
+
+#homework {
+    background-color: #AFEEEE;
+}
+
 #inspiration {
-    background-color: #F0F0F0;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    background-color: #F6CEFC;
 }
