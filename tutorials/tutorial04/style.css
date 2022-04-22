@@ -21,6 +21,8 @@ body {
       "c d e f"
       "g g g f";
    min-height: 100vh;
+   grid-row-gap: 10px;
+   grid-column-gap: 10px;
 }
 
 article,
@@ -30,7 +32,6 @@ main {
    display: flex;
    justify-content: center;
    align-items: center;
-   border: solid 1px #000;
 }
 
 .menu1 {
@@ -80,5 +81,24 @@ aside {
          "c d"
          "e e"
          "g g";
+   }
+}
+
+@media (max-width: 600px) {
+   aside {
+      display: none;
+   }
+
+   .container {
+      height: 120vh;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr) repeat(4, 2.5fr);
+      grid-template-areas:
+         "a . ."
+         "b b b"
+         "c c c"
+         "d d d"
+         "e e e"
+         "g g g";
    }
 }
